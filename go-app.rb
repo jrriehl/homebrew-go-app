@@ -5,42 +5,42 @@
 class GoApp < Formula
   desc ""
   homepage "https://github.com/jrriehl/go-app"
-  version "0.1.11"
+  version "0.1.12"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/jrriehl/go-app/releases/download/v0.1.11/go-app_Darwin_arm64.tar.gz"
-      sha256 "3ac3eebbb891d446e1f5d4a58fc85f3509df1f8f1df2452e903a4e2f39d1b7b2"
+    if Hardware::CPU.intel?
+      url "https://github.com/jrriehl/go-app-bin/releases/download/v0.1.12/go-app-bin_Darwin_x86_64.tar.gz"
+      sha256 "328118c21087daafe964731c4a8ee7a8678015270ba21789081e8d566b314479"
 
       def install
-        bin.install "go-app"
+        bin.install "go-app-bin"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/jrriehl/go-app/releases/download/v0.1.11/go-app_Darwin_x86_64.tar.gz"
-      sha256 "a3f4e56932015fed1c2f457a9ed74cd574aa4091b7c86a7f3a86ca66dec8c35c"
+    if Hardware::CPU.arm?
+      url "https://github.com/jrriehl/go-app-bin/releases/download/v0.1.12/go-app-bin_Darwin_arm64.tar.gz"
+      sha256 "0e3e7b57cd9f30cff7c5e44094cd654d584fe8420a45fdfb1dc493e960fbd2c7"
 
       def install
-        bin.install "go-app"
+        bin.install "go-app-bin"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jrriehl/go-app/releases/download/v0.1.11/go-app_Linux_arm64.tar.gz"
-      sha256 "9bf83d117c9854ec43d14f69c4796709f332a2514d676333ba27396c2035d157"
+      url "https://github.com/jrriehl/go-app-bin/releases/download/v0.1.12/go-app-bin_Linux_arm64.tar.gz"
+      sha256 "299df89a49b235bf077c3aa029e725417d18a02c1044eb5869f1f414aaa863e7"
 
       def install
-        bin.install "go-app"
+        bin.install "go-app-bin"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jrriehl/go-app/releases/download/v0.1.11/go-app_Linux_x86_64.tar.gz"
-      sha256 "4b08c58ae6cac05b170ba5d354a0ad6e9208338b7b00b101d97bc227df858bae"
+      url "https://github.com/jrriehl/go-app-bin/releases/download/v0.1.12/go-app-bin_Linux_x86_64.tar.gz"
+      sha256 "c4ac9ed5a59f125359038e5e2b3a4bcddc7f53595cafd8408974110048668fee"
 
       def install
-        bin.install "go-app"
+        bin.install "go-app-bin"
       end
     end
   end
