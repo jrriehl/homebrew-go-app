@@ -1,5 +1,5 @@
 require "formula"
-require_relative "../custom_download_strategy.rb"
+require_relative "../go-app-download-strategy.rb"
 class Wget < Formula
   homepage "https://www.gnu.org/software/wget/"
   url "https://ftp.gnu.org/gnu/wget/wget-1.15.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy 
